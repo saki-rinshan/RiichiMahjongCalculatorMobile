@@ -1,0 +1,15 @@
+.yaku Label {
+	font-size: 18px;
+}
+
+.hanCenter {
+	text-align: center;
+	padding: 6px;
+	font-size: 30px; 
+}
+
+.leftTextYaku {
+	text-align: left;
+	clear: left;
+	width: 40%;
+}

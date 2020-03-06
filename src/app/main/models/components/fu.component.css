@@ -1,0 +1,17 @@
+.fu Label {
+	font-size: 18px;
+}
+
+.leftTextFu {
+
+	text-align: left;
+	float: left;
+	width: 80%;
+}
+
+.rightTextFu {
+	
+	text-align:right;
+	float: right;
+	width: 20%;
+}

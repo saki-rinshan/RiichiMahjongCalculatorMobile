@@ -1,0 +1,58 @@
+<ActionBar title="test" backgroundColor="#f9b3f0">
+
+	<GridLayout rows="*" width="100%" height="100%">
+		<StackLayout orientation="horizontal" horizontalAlignment="left" row="0" 
+		[nsRouterLink]="['/main']" (touch)="this.interactabilityManager.touchOpacity($event)">	
+			<Label text="←"> </Label> 
+		</StackLayout>
+		<StackLayout orientation="horizontal" horizontalAlignment="center" row="0" textAlignment="center">	
+			<Label text="{{this.languageService.strings.currentTitle}}   "> </Label> 
+		</StackLayout>
+	</GridLayout>
+</ActionBar>
+
+<StackLayout horizontalAlignment="center" backgroundColor="#FEA9F3">
+	<StackLayout height="15%">
+	<Label class="sidebarOption" 
+	text="{{this.languageService.getLanguageString()}}"
+	 (tap)="this.languageService.toggleLanguage()" 
+	width="100%"
+	 height="100%"
+	 class="buttonLabel"
+	 (touch)="this.interactabilityManager.touchOpacity($event)"> </Label>
+	 </StackLayout>
+	 
+					<StackLayout class="underline"> </StackLayout>
+	<StackLayout height="15%" 
+	[nsRouterLink]="['/menu-info']">
+	<Label class="sidebarOption"
+	text="{{this.languageService.strings.infoText}}" 
+	width="100%"
+	height="100%"
+	 class="buttonLabel"
+	 (touch)="this.interactabilityManager.touchOpacity($event)"> </Label>
+	</StackLayout>
+					<StackLayout class="underline"> </StackLayout>
+	<StackLayout height="15%"
+	[nsRouterLink]="['/reference']">
+	<Label class="sidebarOption" 
+	text="{{this.languageService.strings.licenseText}}" 
+	height="100%"
+	width="100%"
+	 class="buttonLabel"
+	 (touch)="this.interactabilityManager.touchOpacity($event)"> </Label>
+	</StackLayout>
+	
+					<StackLayout class="underline"> </StackLayout>
+					<StackLayout height="15%"
+	[nsRouterLink]="['/privacy-info']">
+	<Label class="sidebarOption" 
+	text="{{this.languageService.strings.privacyText}}" 
+	height="100%"
+	width="100%"
+	 class="buttonLabel"
+	 (touch)="this.interactabilityManager.touchOpacity($event)"> </Label>
+	</StackLayout>
+					<StackLayout class="underline"> </StackLayout>
+</StackLayout>
+

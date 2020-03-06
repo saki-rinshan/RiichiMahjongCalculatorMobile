@@ -1,0 +1,454 @@
+	
+<ScrollView orientation="horizontal" height="100%" width="100%">
+	<StackLayout>
+		<GridLayout columns="*,*,*,*,*,*,*,*,*,*,*,*,*" rows="*,*,*" class ="row" width=100% height="100%"paddingBottom="0px">
+			<Image
+				[src]="this.imgFolder + tileList.row1[0].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[0]) ? undefined : tileClicked(tileList.row1[0])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[0])}"
+				[ngStyle]="{'background-color': tileList.row1[0].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="0">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[1].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[1]) ? undefined : tileClicked(tileList.row1[1])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[1])}"
+				[ngStyle]="{'background-color': tileList.row1[1].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="1">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[2].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[2]) ? undefined : tileClicked(tileList.row1[2])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[2])}"
+				[ngStyle]="{'background-color': tileList.row1[2].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="2">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[3].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[3]) ? undefined : tileClicked(tileList.row1[3])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[3])}"
+				[ngStyle]="{'background-color': tileList.row1[3].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="3">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[4].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[4]) ? undefined : tileClicked(tileList.row1[4])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[4])}"
+				[ngStyle]="{'background-color': tileList.row1[4].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="4">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[5].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[5]) ? undefined : tileClicked(tileList.row1[5])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[5])}"
+				[ngStyle]="{'background-color': tileList.row1[5].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="5">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[6].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[6]) ? undefined : tileClicked(tileList.row1[6])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[6])}"
+				[ngStyle]="{'background-color': tileList.row1[6].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="6">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[7].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[7]) ? undefined : tileClicked(tileList.row1[7])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[7])}"
+				[ngStyle]="{'background-color': tileList.row1[7].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="7">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[8].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[8]) ? undefined : tileClicked(tileList.row1[8])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[8])}"
+				[ngStyle]="{'background-color': tileList.row1[8].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="8">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[9].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[9]) ? undefined : tileClicked(tileList.row1[9])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[9])}"
+				[ngStyle]="{'background-color': tileList.row1[9].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="9">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[10].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[10]) ? undefined : tileClicked(tileList.row1[10])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[10])}"
+				[ngStyle]="{'background-color': tileList.row1[10].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="10">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[11].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[11]) ? undefined : tileClicked(tileList.row1[11])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[11])}"
+				[ngStyle]="{'background-color': tileList.row1[11].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="11">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row1[12].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row1[12]) ? undefined : tileClicked(tileList.row1[12])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row1[12])}"
+				[ngStyle]="{'background-color': tileList.row1[12].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="0"
+				col="12">
+			</Image>
+				
+			<Image
+				[src]="this.imgFolder + tileList.row2[0].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[0]) ? undefined : tileClicked(tileList.row2[0])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[0])}"
+				[ngStyle]="{'background-color': tileList.row2[0].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="0">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[1].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[1]) ? undefined : tileClicked(tileList.row2[1])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[1])}"
+				[ngStyle]="{'background-color': tileList.row2[1].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="1">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[2].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[2]) ? undefined : tileClicked(tileList.row2[2])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[2])}"
+				[ngStyle]="{'background-color': tileList.row2[2].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="2">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[3].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[3]) ? undefined : tileClicked(tileList.row2[3])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[3])}"
+				[ngStyle]="{'background-color': tileList.row2[3].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="3">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[4].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[4]) ? undefined : tileClicked(tileList.row2[4])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[4])}"
+				[ngStyle]="{'background-color': tileList.row2[4].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="4">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[5].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[5]) ? undefined : tileClicked(tileList.row2[5])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[5])}"
+				[ngStyle]="{'background-color': tileList.row2[5].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="5">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[6].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[6]) ? undefined : tileClicked(tileList.row2[6])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[6])}"
+				[ngStyle]="{'background-color': tileList.row2[6].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="6">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[7].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[7]) ? undefined : tileClicked(tileList.row2[7])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[7])}"
+				[ngStyle]="{'background-color': tileList.row2[7].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="7">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[8].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[8]) ? undefined : tileClicked(tileList.row2[8])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[8])}"
+				[ngStyle]="{'background-color': tileList.row2[8].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="8">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[9].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[9]) ? undefined : tileClicked(tileList.row2[9])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[9])}"
+				[ngStyle]="{'background-color': tileList.row2[9].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="9">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[10].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[10]) ? undefined : tileClicked(tileList.row2[10])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[10])}"
+				[ngStyle]="{'background-color': tileList.row2[10].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="10">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row2[11].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row2[11]) ? undefined : tileClicked(tileList.row2[11])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row2[11])}"
+				[ngStyle]="{'background-color': tileList.row2[11].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="1"
+				col="11">
+			</Image>
+				
+				
+			<Image
+				[src]="this.imgFolder + tileList.row3[0].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[0]) ? undefined : tileClicked(tileList.row3[0])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[0])}"
+				[ngStyle]="{'background-color': tileList.row3[0].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="0">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[1].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[1]) ? undefined : tileClicked(tileList.row3[1])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[1])}"
+				[ngStyle]="{'background-color': tileList.row3[1].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="1">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[2].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[2]) ? undefined : tileClicked(tileList.row3[2])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[2])}"
+				[ngStyle]="{'background-color': tileList.row3[2].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="2">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[3].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[3]) ? undefined : tileClicked(tileList.row3[3])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[3])}"
+				[ngStyle]="{'background-color': tileList.row3[3].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="3">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[4].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[4]) ? undefined : tileClicked(tileList.row3[4])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[4])}"
+				[ngStyle]="{'background-color': tileList.row3[4].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="4">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[5].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[5]) ? undefined : tileClicked(tileList.row3[5])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[5])}"
+				[ngStyle]="{'background-color': tileList.row3[5].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="5">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[6].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[6]) ? undefined : tileClicked(tileList.row3[6])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[6])}"
+				[ngStyle]="{'background-color': tileList.row3[6].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="6">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[7].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[7]) ? undefined : tileClicked(tileList.row3[7])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[7])}"
+				[ngStyle]="{'background-color': tileList.row3[7].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="7">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[8].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[8]) ? undefined : tileClicked(tileList.row3[8])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[8])}"
+				[ngStyle]="{'background-color': tileList.row3[8].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="8">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[9].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[9]) ? undefined : tileClicked(tileList.row3[9])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[9])}"
+				[ngStyle]="{'background-color': tileList.row3[9].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="9">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[10].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[10]) ? undefined : tileClicked(tileList.row3[10])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[10])}"
+				[ngStyle]="{'background-color': tileList.row3[10].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="10">
+			</Image>
+			<Image
+				[src]="this.imgFolder + tileList.row3[11].name + '.png'" 
+				class="tile"
+				(touch)="this.interactabilityManager.touch($event)"
+				(tap)="shouldDisableTile(tileList.row3[11]) ? undefined : tileClicked(tileList.row3[11])"
+				[ngClass]="{'fourTiles': shouldDisableTile(tileList.row3[11])}"
+				[ngStyle]="{'background-color': tileList.row3[11].isDora? 'pink' :'#FFFFFF'}"
+				height="{{this.tileHeight}}"
+				width="{{this.tileWidth}}"
+				row="2"
+				col="11">
+			</Image>
+		</GridLayout>
+	</StackLayout>
+</ScrollView>

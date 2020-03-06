@@ -1,0 +1,9 @@
+<StackLayout class="row">
+	<StackLayout orientation="horizontal" *ngIf="!isYakuman" class ="yaku">
+		<Label class = "leftText" text="{{yaku.name}}">		</Label> 
+		<Label class ="rightText" text="{{displayed_han}}{{this.languageService.strings.hanText}}"> </Label>
+	</StackLayout>
+	<StackLayout *ngIf="isYakuman" class ="yaku">
+		<Label class = "hanCenter" text="{{yaku.name}}">		</Label> 
+	</StackLayout>
+</StackLayout>

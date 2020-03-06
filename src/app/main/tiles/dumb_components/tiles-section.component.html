@@ -1,0 +1,36 @@
+
+	<WrapLayout orientation="horizontal" width="100%" horizontalAlignment="center"> 
+		
+		<StackLayout orientation="horizontal" *ngFor="let set of this.sets; let i = index" orientation="horizontal" class="setTiles"
+		[ngClass]="{ 'centerTopRowTwo' : this.shouldCenterTopRowTwo(i),  'centerTopRowOne' : this.shouldCenterTopRowOne(), 'centerMidRowThree': shouldCenterMidRowThree(i)}" horizontalAlignment="center">
+			<WrapLayout *ngIf="set.stype != 4 || (set.stype == 4 && set.is_open == true)">
+				<img *ngFor="let tile of set.tiles" 
+					src='{{imgFolder}}{{tile.name}}.png' 
+					width="{{this.uiSizeController.tilesSectionTileWidth}}" 
+					(tap)="setClicked(set)"
+					[ngStyle]="{'background-color': tile.isDora? 'pink' :'#AFFFFF'}"
+					class="tile"
+					[class.userTiles]="true"  >
+			</WrapLayout>
+			<WrapLayout *ngIf="set.stype == 4 && set.is_open == false">
+			<img *ngFor="let tile of set.tiles; let i=index" 
+					src="{{(i == 0 || i == 3) ? '~/assets/img/tiles/Export/Regular/Front.png' : imgFolder + tile.name + '.png'}}"
+					width="{{this.uiSizeController.tilesSectionTileWidth}}" 
+					(tap)="setClicked(set)"
+					[ngStyle]="{'background-color': tile.isDora? 'pink' :'#AFFFFF'}"
+					class="tile"
+					[class.userTiles]="true"  >
+					
+			</WrapLayout>
+		</StackLayout>
+		<WrapLayout *ngIf="this.sets.length < 5" orientation="horizontal" class="tilesSection">
+			<Image *ngFor="let tile of this.tiles; let i = index"
+				src='{{imgFolder}}{{tile.name}}.png' 
+				width="{{this.uiSizeController.tilesSectionTileWidth}}" 
+				(tap)="tileClicked(tile)"
+				class="tile"
+				[class.userTiles]="true"
+				[ngStyle]="{'background-color': tile.isDora? 'pink' :'#AFFFFF'}"
+				[ngClass]="{'lastAdded' : (i == this.mainTilesService.agariIndex)}"> </Image>
+		</WrapLayout>
+	</WrapLayout>

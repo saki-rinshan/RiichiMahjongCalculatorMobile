@@ -1,0 +1,107 @@
+<TabView width="100%" class="bodyX" tabBackgroundColor="#F73CDE" androidSelectedTabHighlightColor="#f07bf7" >
+	<ng-container *ngFor="let hand of resultDisplayService.possibleHands">
+		<ScrollView *tabItem="{title: hand.containsYakuman()? this.languageService.strings.yakumanText : hand.han + ' ' + this.languageService.strings.hanText, textTransform: 'none'}" > 
+		<StackLayout width="100%">
+			<StackLayout width="100%">
+			
+				<StackLayout *ngIf="hand.isPredicted">
+					<Label class="predictedText" text="**{{this.languageService.strings.predictedHandText}}**"> </Label>
+				</StackLayout>
+				
+				<StackLayout width="85%" class="bottomPad10" >
+					<StackLayout *ngIf="!hand.containsYakuman()" orientation="horizontal" class="titleSection">
+						<Label text="{{this.languageService.strings.yakuText}}" class="leftText"
+						width="20%"></Label>
+						<Label text="{{getHanString(hand)}}"  class="rightText"
+						(longPress)="(getHanString(hand).indexOf(' ') == -1) ? this.toolTipAlertService.showHanInfo(hand.han) : return"
+						(touch)="this.interactabilityManager.touchMin($event)" 
+						width="80%"></Label>
+					</StackLayout>
+					<StackLayout *ngIf="hand.containsYakuman()" class="titleSectionYakuman" width="100%" verticalAlignment="center">
+						<Label witdth="100%" class="centerText" text="{{this.languageService.strings.yakumanText}}"> </Label>
+					</StackLayout>
+					<StackLayout class="underline">
+					</StackLayout>
+					<StackLayout *ngIf="!hand.containsYakuman()">
+						<ListView isUserInteractionEnabled="false"
+						separatorColor="transparent" height="{{hand.validYaku.length * 26}}" [items]="hand.validYaku">
+							<ng-template let-yaku="item">
+								<StackLayout
+								(longPress)="this.toolTipAlertService.showGeneric(yaku)"
+								(touch)="this.interactabilityManager.touchMin($event)">
+									<yaku [yaku] = "yaku"
+										[isOpen]= "hand.isOpen"
+										[isYakuman]="false"> 
+									</yaku>
+								</StackLayout>
+							</ng-template>
+						</ListView>
+						<ListView separatorColor="transparent"  isUserInteractionEnabled="false" 
+						height="{{hand.otherYaku.length * 26}}" [items]="hand.otherYaku">
+							<ng-template let-yaku="item">
+								<StackLayout
+								(longPress)="this.toolTipAlertService.showGeneric(yaku)"
+								(touch)="this.interactabilityManager.touchMin($event)"> 
+									<yaku [yaku] = "yaku"
+										[isOpen]= "hand.isOpen"
+										[isYakuman]="false"> 
+									</yaku>
+								</StackLayout>
+							</ng-template>
+						</ListView>
+					</StackLayout>
+					<StackLayout *ngIf="hand.containsYakuman()" class="yakuMan">
+						<ListView separatorColor="transparent"  isUserInteractionEnabled="false" 
+						height="{{hand.getYakuman().length * 40}}" [items]="hand.getYakuman()">
+							<ng-template let-yaku="item">
+								<StackLayout
+								(longPress)="this.toolTipAlertService.showGeneric(yaku)"
+								(touch)="this.interactabilityManager.touchMin($event)">
+									<yaku [yaku] = "yaku"
+										[isOpen]= "hand.isOpen"
+										[isYakuman]="true"> 
+									</yaku>
+								</StackLayout>
+							</ng-template>
+						</ListView>
+					</StackLayout>
+				</StackLayout>
+				
+				<StackLayout width="85%" class="bottomPad10" *ngIf="!hand.containsYakuman()">
+					<StackLayout orientation="horizontal" fontSize="24px" class="titleSection">
+						<Label class="leftText" text="{{this.languageService.strings.fuText}}"></Label>
+						<Label class="rightText" text="{{hand.fu}} {{this.languageService.strings.fuText}}"></Label>
+					</StackLayout>
+					<StackLayout class="underline">
+					</StackLayout>
+					<ListView separatorColor="transparent"  isUserInteractionEnabled="false" 
+						height="{{hand.fus.length * 26}}" [items]="hand.fus">
+						<ng-template let-fu="item">
+							<StackLayout 
+								(longPress)="this.toolTipAlertService.showGeneric(fu)"
+								(touch)="this.interactabilityManager.touchMin($event)">
+									<fu [name]="fu.name" 
+										[fu]= "fu.fu" > 
+									</fu>
+							</StackLayout>
+						</ng-template>
+					</ListView>
+				</StackLayout>
+			</StackLayout>
+		
+				<StackLayout class = "score">
+					<Label class = "scoreText" text="{{ hand.payout.generatePayoutString() }}"
+					(longPress)="this.toolTipAlertService.showScore(hand)"
+					(touch)="this.interactabilityManager.touchMin($event)"
+					width="60%"></Label>
+				</StackLayout>
+				<StackLayout class="bottomPad10R">
+					<tiles-section 
+						[tiles]="hand.tiles"
+						[sets]="hand.sets"  >
+					</tiles-section>
+				</StackLayout>
+		</StackLayout>
+		</ScrollView> 
+	</ng-container>
+</TabView>

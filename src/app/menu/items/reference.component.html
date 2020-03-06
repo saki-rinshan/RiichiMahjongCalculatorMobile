@@ -1,0 +1,146 @@
+<ActionBar title="test" backgroundColor="#f9b3f0">
+
+	<GridLayout rows="*" width="100%" height="100%">
+		<StackLayout orientation="horizontal" horizontalAlignment="left" row="0" 
+		[nsRouterLink]="['/menu']" (touch)="this.interactabilityManager.touchOpacity($event)">	
+			<Label text="←"> </Label> 
+		</StackLayout>
+		<StackLayout orientation="horizontal" horizontalAlignment="center" row="0">	
+			<Label text="{{this.languageService.strings.currentTitle}}   "> </Label> 
+		</StackLayout>
+	</GridLayout>
+</ActionBar>
+
+<ScrollView width="90%" scrollBarIndicatorVisible="false"  horizontalAlignment="center">
+	<StackLayout class="body" horizontalAlignment="center">
+		<Label textWrap="true">
+			<FormattedString>
+				<Span text="&#xA;&#xA;Many thanks to "> </Span>
+				<Span text="github/FlufflyStuff " fontAttributes="Bold">  </Span>
+				<Span text="for their"> </Span>
+			</FormattedString>
+		</Label>
+		<Label textWrap="true"(tap)="this.openX('https://github.com/FluffyStuff/riichi-mahjong-tiles')">
+			<FormattedString>
+				<Span text="mahjong tile assets.&#xA;" color="#3C5AFD"> </Span>
+			</FormattedString>
+		</Label>
+		<Label>
+			<FormattedString>
+				<Span text="Liscensed under: "> </Span>
+			</FormattedString>
+		</Label>
+		<Label (tap)="this.openX('https://creativecommons.org/licenses/by/4.0/')" textWrap="true">
+			<FormattedString>
+				<Span text="Creative Commons Attribution 4.0 International License&#xA;&#xA;" color="#3C5AFD" fontAttributes="Italic"> </Span>
+			</FormattedString>
+		</Label>
+		
+		<Label textWrap="true">
+			<FormattedString>
+				<Span text="&#xA;Many thanks to "> </Span>
+				<Span text="u/Barticle " fontAttributes="Bold">  </Span>
+				<Span text="for their"> </Span>
+			</FormattedString>
+		</Label>
+		<Label (tap)="this.openX('https://www.reddit.com/r/Mahjong/comments/cicql2/automatic_riichi_mahjong_calculator/')" textWrap="true">
+			<FormattedString>
+				<Span text="extensive feedback to the mahjong calculator. &#xA;&#xA;" color="#3C5AFD" fontAttributes="Italic"> </Span>
+			</FormattedString>
+		</Label>
+		
+		<Label textWrap="true">
+			<FormattedString>
+				<Span text="&#xA;Many thanks to the "> </Span>
+				<Span text="English Wikipedia " fontAttributes="Bold">  </Span>
+				<Span text="for the "> </Span>
+			</FormattedString>
+		</Label>
+		<Label textWrap="true"(tap)="this.openX('https://en.wikipedia.org/wiki/Japanese_Mahjong')">
+			<FormattedString>
+				<Span text="various bits of information such as the English Yaku/Fu and score calculations.&#xA;" color="#3C5AFD"> </Span>
+			</FormattedString>
+		</Label>
+		<Label>
+			<FormattedString>
+				<Span text="Liscensed under: "> </Span>
+			</FormattedString>
+		</Label>
+		<Label (tap)="this.openX('https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License')" textWrap="true">
+			<FormattedString>
+				<Span text="Commons Attribution-ShareAlike 3.0 Unported Liscense&#xA;&#xA;" color="#3C5AFD" fontAttributes="Italic"> </Span>
+			</FormattedString>
+		</Label>
+		
+		
+		<Label textWrap="true">
+			<FormattedString>
+				<Span text="&#xA;Many thanks to the "> </Span>
+				<Span text="Japanese Wikipedia " fontAttributes="Bold">  </Span>
+				<Span text="for the "> </Span>
+			</FormattedString>
+		</Label>
+		<Label textWrap="true"(tap)="this.openX('https://ja.wikipedia.org/wiki/麻雀')">
+			<FormattedString>
+				<Span text="various bits of information such as the Japanese Yaku/Fu and other various names.&#xA;" color="#3C5AFD"> </Span>
+			</FormattedString>
+		</Label>
+		<Label>
+			<FormattedString>
+				<Span text="Liscensed under: "> </Span>
+			</FormattedString>
+		</Label>
+		<Label (tap)="this.openX('https://ja.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License')" textWrap="true">
+			<FormattedString>
+				<Span text="Commons Attribution-ShareAlike 3.0 Unported Liscense&#xA;&#xA;" color="#3C5AFD" fontAttributes="Italic"> </Span>
+			</FormattedString>
+		</Label>
+		
+		<Label textWrap="true">
+			<FormattedString>
+				<Span text="&#xA;&#xA;Many thanks to "> </Span>
+				<Span text="github/thtrieu " fontAttributes="Bold">  </Span>
+				<Span text="for their"> </Span>
+			</FormattedString>
+		</Label>
+		<Label textWrap="true"(tap)="this.openX('https://github.com/thtrieu/darkflow')">
+			<FormattedString>
+				<Span text="YOLO implementation, darkflow, used for tile detection. &#xA;" color="#3C5AFD"> </Span>
+			</FormattedString>
+		</Label>
+		<Label>
+			<FormattedString>
+				<Span text="Liscensed under: "> </Span>
+			</FormattedString>
+		</Label>
+		<Label (tap)="this.openX('https://github.com/thtrieu/darkflow/blob/master/LICENSE')" textWrap="true">
+			<FormattedString>
+				<Span text="GNU General Public License v3.0&#xA;&#xA;" color="#3C5AFD" fontAttributes="Italic"> </Span>
+			</FormattedString>
+		</Label>
+		
+		
+		<Label textWrap="true">
+			<FormattedString>
+				<Span text="&#xA;&#xA;Many thanks to "> </Span>
+				<Span text="Google's mobilenet team " fontAttributes="Bold">  </Span>
+				<Span text="for their"> </Span>
+			</FormattedString>
+		</Label>
+		<Label textWrap="true"(tap)="this.openX('https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet')">
+			<FormattedString>
+				<Span text="classification model, MobileNetV2, used for tile classification. &#xA;" color="#3C5AFD"> </Span>
+			</FormattedString>
+		</Label>
+		<Label>
+			<FormattedString>
+				<Span text="Liscensed under: "> </Span>
+			</FormattedString>
+		</Label>
+		<Label (tap)="this.openX('https://github.com/tensorflow/models/blob/master/LICENSE')" textWrap="true">
+			<FormattedString>
+				<Span text="Apache License 2.0&#xA;&#xA;" color="#3C5AFD" fontAttributes="Italic"> </Span>
+			</FormattedString>
+		</Label>
+	</StackLayout>
+</ScrollView> 

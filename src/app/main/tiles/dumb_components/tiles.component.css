@@ -1,0 +1,19 @@
+.tile {
+	border-color: black black black black;
+    border-width: 3 3 3 3;
+	
+	padding: 2px;
+	margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.fourTiles {
+	opacity: 0.4;
+}
+
+.row {
+	margin-bottom: 5px;
+}
+

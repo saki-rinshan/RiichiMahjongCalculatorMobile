@@ -1,0 +1,83 @@
+.bodyX {
+	background: linear-gradient(#FEA9F3, #FA69E7, #F73CDE);
+}
+
+.calcButton {
+	background-color: #bcd5ff;
+	border-color: #f07bf7;
+	border-width: 3 3 3 3;
+}
+
+.fromTop {
+	visibility: visible;
+	transform: translate(0,0);
+	animation-timing-function: ease-in;
+	animation-direction: reverse;
+	animation-name: animationTop;
+	animation-duration: 2s;
+	z-index: 1;
+	
+}
+
+@keyframes animationTop {
+	from {
+		transform: translate(0,0);
+	}
+	to { 
+		transform: translate(0,50%);
+	}
+}
+
+.fromBottom {
+	visibility: visible;
+	animation-name: animationBottom;
+	animation-duration: 2s;
+	z-index: 1;
+	transform: translate(0, 50%);
+	animation-timing-function: ease-out;
+}
+
+@keyframes animationBottom {
+	from {
+		transform: translate(0,0);
+	}
+	to { 
+		transform: translate(0,50%);
+	}
+}
+
+main-tiles-display  {
+	
+	min-width: 800px;
+	height: 178px; 
+	width: 66%;
+	float: left;
+	margin-top: -16px;
+    margin-bottom: 18px;
+    margin-right: auto;
+    margin-left: 7%;
+}
+
+main-tiles-selection {
+	height: 200px;
+	min-width: 800px;
+	width: 66%;
+	float: left; 
+    margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: 7%;
+} 
+
+extra-info {
+	width: 20%;
+	display: block;
+	margin-right: 6%;
+	float: right; 
+	margin-left: -6%; 
+	margin-top: 2px; 
+}
+
+calculator {
+  clear: both;
+  margin-top: auto;
+}

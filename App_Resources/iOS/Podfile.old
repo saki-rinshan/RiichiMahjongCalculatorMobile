@@ -1,0 +1,7 @@
+pre_install do |installer|
+    installer.analysis_result.specifications.each do |s|
+        if s.name == 'Socket.IO-Client-Swift' || s.name == 'Starscream' || s.name == 'StarscreamSocketIO' || s.name == 'Toaster'
+            s.swift_version = '4.2'
+        end
+    end
+end

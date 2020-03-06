@@ -1,0 +1,13 @@
+.underline {
+	border-color: black;
+	border-bottom-width: 1;
+}
+
+
+.buttonLabel {
+    text-align: center;
+	border-color: black;
+	border-width: 0 0 0 0;
+	font-size: 25;
+	padding-top:12;
+}

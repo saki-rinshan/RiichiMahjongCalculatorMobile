@@ -1,0 +1,10 @@
+<StackLayout orientation="horizontal" height="13%" width="96%" margin-left="4%">
+	<button *ngFor="let button of this.setButtons"
+			text="{{button.name}}"
+			(tap)="shouldDisableSetButton(button) ? undefined : onClickMe(button)"  
+			[class.selected]="button.isToggled"
+			[ngClass] = "{'grayed': shouldDisableSetButton(button)}"
+			textTransform="none"
+			fontSize="12"> 
+	</button>
+</StackLayout>

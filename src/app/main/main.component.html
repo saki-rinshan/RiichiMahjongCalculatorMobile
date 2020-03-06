@@ -1,0 +1,63 @@
+<ActionBar title="test" backgroundColor="#f9b3f0">
+  
+	<GridLayout rows="*" width="100%" height="100%" >
+		<StackLayout (touch)="this.interactabilityManager.touchOpacity($event)"
+			[nsRouterLink]="['/menu']" horizontalAlignment="left" row="0">
+				<Label text="&#9776;"> </Label>
+			</StackLayout> 
+			<StackLayout horizontalAlignment="center" row="0" textAlignment="center"> 
+				<Label text="{{this.languageService.strings.currentTitle}}   " textAlignment="center"> </Label>
+			</StackLayout>
+			<StackLayout (tap)="deleteTapped()" (touch)="this.interactabilityManager.touchNoBack($event)" 
+				horizontalAlignment="right" row="0" textAlignment="center">
+				<Label text="{{this.languageService.strings.resetAllText}}   "></Label> 
+			</StackLayout>
+	</GridLayout>
+</ActionBar>
+	<!--	
+   <Button text="Open modal" (tap)="showModal()" textWrap="true"> </Button>
+   !-->
+   
+<GridLayout rows="*" width="100%" height="100%" class="bodyX">
+	<StackLayout row="0">
+	<TabView #tabView tabBackgroundColor="#FEA9F3" 
+		androidSelectedTabHighlightColor="#f07bf7"
+		(selectedIndexChanged)="tabViewIndexChange( tabView.selectedIndex)">
+		<StackLayout *tabItem="{title: this.languageService.strings.tilesTabText, textTransform: 'none'}" width="100%" height="100%">
+
+			<WrapLayout left="0" top="10%" width="100%" height="27%" >
+				<main-tiles-display>
+				</main-tiles-display> 
+			</WrapLayout>
+		
+			<StackLayout 
+				width="100%" height="73%">
+					<main-tiles-selection>
+					</main-tiles-selection>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout *tabItem="{title:  this.languageService.strings.extraInfoTabText, textTransform: 'none'}" width="100%" height="100%">
+			<StackLayout row="0"width="100%" height="100%">
+				<extra-info>
+				</extra-info>
+			</StackLayout>
+		</StackLayout>
+	</TabView>
+	</StackLayout>
+	
+	<AbsoluteLayout row="0" width="100%" height="100%">
+		
+		<Button text="{{this.languageService.strings.calculateTabText}}" font-size="22px" 
+		class="calcButton"
+		height="9%";
+		left="{{(this.uiSizeControllerService.screenWidth/2) -50}}"
+		width="100"
+		top="-50" 
+		[ngClass]="{ 'fromTop': (this.mainTilesService.totalTiles != 14), 
+		'fromBottom': this.mainTilesService.totalTiles == 14}"
+		textTransform="none"
+		(tap)="showModal()"
+		(touch)="this.interactabilityManager.touchNoBack($event)"
+		></Button>
+	</AbsoluteLayout>
+</GridLayout>

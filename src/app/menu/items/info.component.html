@@ -1,0 +1,46 @@
+<ActionBar title="test" backgroundColor="#f9b3f0">
+
+	<GridLayout rows="*" width="100%" height="100%">
+		<StackLayout orientation="horizontal" horizontalAlignment="left" row="0" 
+		[nsRouterLink]="['/menu']" (touch)="this.interactabilityManager.touchOpacity($event)">	
+			<Label text="←"> </Label> 
+		</StackLayout>
+		<StackLayout orientation="horizontal" horizontalAlignment="center" row="0">	
+			<Label text="{{this.languageService.strings.currentTitle}}   "> </Label> 
+		</StackLayout>
+	</GridLayout>
+</ActionBar>
+
+<ScrollView *ngIf="this.languageService.currentLanguage==0" width="90%" scrollBarIndicatorVisible="false">
+	<StackLayout class="body">
+	<Label horizontalAlignment="center" textWrap="true" text=
+	"&#xA;Mahjong can be an overwhelmingly complex game. For a beginner there are many things to learn. When I first started, I was struggling to learn the various rules of mahjong and 30+ unique yaku. And once I finally won a round, I had to calculate the score. This was usually the most tilting part of the game for me and my friends. We didn't know many yaku or even the calculation formula and so we used a calculator. But it still took a long time, and once we were finished, we weren't even sure if it was correct. We wouldn't know what tanyao or even pinfu was and would go and search it up which would take even more time. &#xA;">
+	</Label>
+
+	<Label textWrap="true" text=
+	"Back then, what I thought was important was playing and learning the basic game itself, not the calculations that came after a round was over. I built this calculator to help people like me and my friends who wanted to learn this wonderful game of riichi mahjong. Along with the most basic functions of any mahjong calculator, this calculator also has tooltips for all the yaku, fu, han, and the point scoring system in general. If you long-press the various texts/buttons mentioned above, you will see their pronunciations and descriptions. Now, instead of having to go and search for what tanyao is or what was the scoring formula, it is all compiled into one place.  &#xA;">
+	</Label>
+
+	<Label textWrap="true" text=
+	"I hope that you are able to find some use for this calculator.  &#xA;">
+	</Label>
+	</StackLayout>
+</ScrollView> 
+
+<ScrollView *ngIf="this.languageService.currentLanguage==1" width="90%" scrollBarIndicatorVisible="false">
+	<StackLayout class="body" horizontalAlignment="center">
+	<Label textWrap="true" text=" &#xA;麻雀って時々圧倒的に複雑。初心者には色々な事を習わなければ習わない。僕が始まった頃、その多いなルールと３０以上の役を習うのはすごく難しかった。そして局をやっと和了った時計算があった。友達と僕にとってこれは麻雀の最もイライラとこ。数少ない役そして計算式も知らない僕達は計算機に頼れた。計算機を使っても色々な手間を掛けた。まずはその計算は本とに正しかったのかな？計算式を知らない僕達はその確かめる方法が面倒すぎてだっと思った。単に計算得点を受けた。それも断么九や平和さえ知らなかった。計算表に出た度にグーグル先生に問いかけた。「断么九とは？」　「平和とは？」  &#xA;">
+	</Label>
+
+	<Label textWrap="true" text="その時僕はその計算に拘る必要はないと思った。大事なのは麻雀の中心のプレー。だからこの計算機を作った。僕達見たい、この素敵な麻雀を習いたがっている人の為に。麻雀計算機の基本機能の追加、色々なヒントがある。その様々な役や符や計算得点をホバーと、そのふりがなと記述は見る事ができる。そのインフォメーションは大体ここに変種されています。  &#xA;">
+	</Label>
+
+	<Label textWrap="true" text=
+	"この計算機を役を立ていますように。  &#xA;">
+	</Label>
+	
+	<Label textWrap="true" text=
+	"ところで, 日本人じゃないなので手加減してください。  &#xA;">
+	</Label>
+	</StackLayout>
+</ScrollView> 

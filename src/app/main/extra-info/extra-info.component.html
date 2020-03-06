@@ -1,0 +1,208 @@
+
+<ScrollView height="100%">
+<StackLayout width="100%">
+
+	<Button
+	class="dora-button" 
+	text="{{this.languageService.strings.addDoraText}}" textTransform="none" width="90%"
+	(tap)="showModal()"> </Button>
+	
+	<StackLayout orientation="horizontal" height="20%" width="85%" class="doraTilesSection">
+		<Image src="{{doraTiles.length>=1? getDoraFile(0) : getDoraFile(-1)}}" class = "doraTile"
+		[ngClass]="{ 'dora' : doraTiles.length>=1}"
+		(tap)="doraTiles.length>=1? removeDora(0) : showModal()"
+		width="{{this.tileWidth}}" 
+		height="{{this.tileHeight}}"
+		(touch)="this.interactabilityManager.touchNoBack($event)"
+		>
+		</Image>
+		<Image src="{{doraTiles.length>=2? getDoraFile(1) : getDoraFile(-1)}}" class = "doraTile"
+		[ngClass]="{ 'dora' : doraTiles.length>=2}"
+		(tap)="doraTiles.length>=2? removeDora(1) : showModal()"
+		width="{{this.tileWidth}}"
+		height="{{this.tileHeight}}"
+		(touch)="this.interactabilityManager.touchNoBack($event)"
+		>
+		</Image>
+		<Image src="{{doraTiles.length>=3? getDoraFile(2) : getDoraFile(-1)}}" class = "doraTile"
+		[ngClass]="{ 'dora' : doraTiles.length>=3}"
+		(tap)="doraTiles.length>=3? removeDora(2) : showModal()"
+		width="{{this.tileWidth}}"
+		height="{{this.tileHeight}}" 
+		(touch)="this.interactabilityManager.touchNoBack($event)"
+		>
+		</Image>
+		<Image src="{{doraTiles.length>=4? getDoraFile(3) : getDoraFile(-1)}}"class = "doraTile"
+		[ngClass]="{ 'dora' : doraTiles.length>=4}"
+		(tap)="doraTiles.length>=4? removeDora(3) : showModal()" 
+		width="{{this.tileWidth}}"
+		height="{{this.tileHeight}}" 
+		(touch)="this.interactabilityManager.touchNoBack($event)"
+		>
+		</Image>
+	</StackLayout>
+	<StackLayout orientation="horizontal" height="20%" width="100%" class="windSection">
+		<Label textWrap="true" text="{{this.languageService.strings.prevailingWindText}}" 
+		width="12%" class="windLabel"> </Label>
+		<Image src='{{imgFolder}}ton.png'class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.prevailingWind==TileValue.East? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(false, TileValue.East)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+		<Image src='{{imgFolder}}nan.png' class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.prevailingWind==TileValue.South? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(false, TileValue.South)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+		<Image src='{{imgFolder}}xi.png'class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.prevailingWind==TileValue.West? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(false, TileValue.West)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+		<Image src='{{imgFolder}}pei.png' class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.prevailingWind==TileValue.North? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(false, TileValue.North)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+	</StackLayout>
+	
+	<StackLayout orientation="horizontal" height="20%" width="100%" class="windSection">
+		<Label  textWrap="true" text="{{this.languageService.strings.seatWindText}}" 
+		width="12%" class="windLabel"> </Label>
+		<Image src='{{imgFolder}}ton.png'class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.seatWind==TileValue.East? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(true, TileValue.East)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+		<Image src='{{imgFolder}}nan.png' class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.seatWind==TileValue.South? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(true, TileValue.South)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+		<Image src='{{imgFolder}}xi.png'class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.seatWind==TileValue.West? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(true, TileValue.West)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+		<Image src='{{imgFolder}}pei.png' class ='seat'
+			[ngStyle]="{'background-color': this.extraInfoService.seatWind==TileValue.North? '#AFFFFF' :'#FFFFFF'}"
+			(tap)="toggleWind(true, TileValue.North)"
+			width="{{this.windWidth}}"
+			height="{{this.windHeight}}"
+			(touch)="this.interactabilityManager.touchNoBack($event)">
+		</Image>
+	</StackLayout>
+		<StackLayout class="buttons" width="100%">
+			<StackLayout orientation="horizontal" horizontalAlignment="center" width="100%">
+				 <GridLayout columns="auto, auto, auto" rows="*, *, *">
+					<Button
+						text="{{buttonRows[0][0].name}}"
+						[class.selected]="buttonRows[0][0].isToggled"
+						(tap)="onClickMe(buttonRows[0][0])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[0][0])"
+						textTransform="none"
+						row="0"
+						col="0">
+					</Button>
+					<Button
+						text="{{buttonRows[0][1].name}}"
+						[class.selected]="buttonRows[0][1].isToggled"
+						(tap)="onClickMe(buttonRows[0][1])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[0][1])"
+						textTransform="none"
+						row="0"
+						col="1">
+					</Button>
+					<Button
+						text="{{buttonRows[0][2].name}}"
+						[class.selected]="buttonRows[0][2].isToggled"
+						(tap)="onClickMe(buttonRows[0][2])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[0][2])"
+						textTransform="none"
+						row="0"
+						col="2">
+					</Button>
+					<Button
+						text="{{buttonRows[1][0].name}}"
+						[class.selected]="buttonRows[1][0].isToggled"
+						(tap)="onClickMe(buttonRows[1][0])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[1][0])"
+						textTransform="none"
+						row="1"
+						col="0">
+					</Button>
+					<Label text="↓{{this.languageService.strings.renchanText}}↓"
+						class="windLabel"
+						verticalAlignment="bottom"
+						row="1"
+						col="1"> 
+					</Label>
+					<Button
+						text="{{buttonRows[1][1].name}}"
+						height="100%"
+						[class.selected]="buttonRows[1][1].isToggled"
+						(tap)="onClickMe(buttonRows[1][1])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[1][1])"
+						textTransform="none"
+						row="1"
+						col="2">
+					</Button>
+					<Button
+						text="{{buttonRows[2][0].name}}"
+						[class.selected]="buttonRows[2][0].isToggled"
+						(tap)="onClickMe(buttonRows[2][0])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[2][0])"
+						textTransform="none"
+						row="2"
+						col="0">
+					</Button>
+					<Button
+						text="{{buttonRows[2][1].name}}"
+						[class.selected]="buttonRows[2][1].isToggled"
+						(tap)="onClickMe(buttonRows[2][1])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[2][1])"
+						textTransform="none"
+						row="2"
+						col="1">
+					</Button>
+					<Button
+						text="{{buttonRows[2][2].name}}"
+						[class.selected]="buttonRows[2][2].isToggled"
+						(tap)="onClickMe(buttonRows[2][2])" 
+						(longPress)="this.toolTipAlertService.showGeneric(buttonRows[2][2])"
+						textTransform="none"
+						row="2"
+						col="2">
+					</Button>
+				 </GridLayout>
+			</StackLayout>
+		</StackLayout>
+		<StackLayout orientation="horizontal" horizontalAlignment="center" width="100%" height="10%" class="renchan">
+			<button (tap)="decrementRenchan()" text="-"  fontAttributes="Bold"
+			class="minusButton" fontSize="24"></button>
+			<Label 
+			text="{{this.languageService.strings.renchanText}} [ {{this.extraInfoService.renchanCounter}} ]"
+			textWrap="true" 
+			class="renchanLabel"
+			fontSize="24"
+			></Label>
+			<button (tap)="incrementRenchan()" text="+"  fontAttributes="Bold"
+			class="plusButton"
+			fontSize="24"></button>
+		</StackLayout>
+</StackLayout>
+</ScrollView>
